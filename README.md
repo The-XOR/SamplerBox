@@ -23,6 +23,4 @@ sudo python setup.py install
 
 pip install psutil
 pip install pyalsaaudio
-pip install pymidi
-pip install py-midi
 pip install sequencer
