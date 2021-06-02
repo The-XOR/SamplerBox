@@ -1,0 +1,42 @@
+<META NAME="Generator" CONTENT="Stone's WebWriter 3.5">
+<!DOCTYPE html><HTML><HEAD><meta charset="UTF-8">
+<!-- Minus AutoDato -->
+	<TITLE>Modulate</TITLE>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<LINK REL="stylesheet" TYPE="text/css" HREF="SamplerBox.css">
+<script SRC="SamplerBox.API" TYPE="text/javascript"></script>
+<script SRC="SamplerBox_GUI.js" TYPE="text/javascript"></script>
+</HEAD>
+<BODY>
+
+<TABLE WIDTH="100%"><TR>
+<TD><BUTTON TYPE="button" onclick='window.location.assign("index.html");'>Dashboard</BUTTON> &nbsp;</TD>
+<TD ALIGN="center"><B>Modulate</B></TD>
+<TD ALIGN="center"><BUTTON TYPE="button" onclick="SB_Refresh();">Refresh</BUTTON></TD>
+</TR></TABLE>
+
+<FORM ID="elem_SB_Form">
+<span ID="input_SB_LFOtype">&nbsp; &nbsp; &nbsp;</span>
+<BR>
+<B>Vibrato</B> &nbsp; <span ID="input_SB_VIBRtrill">Trill </span>
+<BR>
+<span ID="input_SB_VIBRpitch">1/32 note:</span>
+<span ID="input_SB_VIBRspeed">14=~5Hz</span>
+<BR>
+<B>Tremolo</B> &nbsp; <span ID="input_SB_TREMtrill">Trill </span>
+<BR>
+<span ID="input_SB_TREMampl">Volume &nbsp;:</span>
+<span ID="input_SB_TREMspeed">7=~5Hz &nbsp;</span>
+<BR>
+<B>Panning</B>
+<BR>
+<span ID="input_SB_PANwidth">Width &nbsp; &nbsp; :</span>
+<span ID="input_SB_PANspeed">7=~5Hz &nbsp;</span>
+<BR>
+<B>Rotate</B> is vibrato + tremolo + panning at vibratospeed
+</FORM>
+
+<script>SB_Update();</script>
+</BODY>
+</HTML>
