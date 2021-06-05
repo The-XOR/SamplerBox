@@ -295,9 +295,13 @@ try:
     if gv.cp.getboolean(gv.cfg,"USE_HD44780_16x2_LCD".lower()):
         gv.GPIO=True
         import lcd_16x2
+        import LEDs
         lcd = lcd_16x2.HD44780()
         def display(msg='',msg7seg='',menu1='',menu2='',menu3='',*z):
             lcd.display(msg,menu1,menu2,menu3)
+            LEDs.signal()
+        LEDs.green(False)
+        LEDs.red(True,True)
         display('Start Samplerbox')
 
     elif gv.cp.getboolean(gv.cfg,"USE_I2C_LCD".lower()):
