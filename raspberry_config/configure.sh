@@ -24,7 +24,9 @@ sudo ln -s /tmp/dhcpcd.resolv.conf /etc/resolv.conf
 
 sudo rm /var/lib/systemd/random-seed
 sudo ln -s /tmp/random-seed /var/lib/systemd/random-seed
+sudo systemctl daemon-reload
 
+cp .bashrc /home/pi/
 
 cat /etc/fstab
 echo "Edita il file fstab copiando i PARTUUID cus sopr, poi sostituisci lo file"
