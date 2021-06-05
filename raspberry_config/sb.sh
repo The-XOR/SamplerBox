@@ -5,5 +5,5 @@ if [ -z "$(ls -A /samples)" ];
 fi
 
 killall python
-cd SamplerBox
+cd ~/SamplerBox
 python samplerbox.py
