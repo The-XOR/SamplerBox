@@ -24,6 +24,9 @@ sudo ln -s /tmp/dhcpcd.resolv.conf /etc/resolv.conf
 
 sudo rm /var/lib/systemd/random-seed
 sudo ln -s /tmp/random-seed /var/lib/systemd/random-seed
+sudo systemctl disable hciuart.service
+sudo systemctl disable bluealsa.service
+sudo systemctl disable bluetooth.service
 sudo systemctl daemon-reload
 
 cp .bashrc /home/pi/

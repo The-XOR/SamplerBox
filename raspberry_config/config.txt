@@ -64,3 +64,5 @@ max_framebuffers=2
 [all]
 #dtoverlay=vc4-fkms-v3d
 dtoverlay=allo-boss-dac-pcm512x-audio
+dtoverlay=disable-bt
+
