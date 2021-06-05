@@ -18,7 +18,7 @@
 
 ######  General values ######
 #
-AUDIO_DEVICE_ID = -1            ; -1=autodetect, specify ID of your device to override
+AUDIO_DEVICE_ID = 2           ; -1=autodetect, specify ID of your device to override
 AUDIO_DEVICE_NAME = Detect      ; ..or specify (part of) it's name. SB uses the first match of ID or NAME.
 MIXER_CONTROL = Detect          ; Fill this to override autodetection, specify None to disable alsa volume control
 SAMPLERATE = 44100              ; Sets value for wav's and audio device (these have to be the same)
@@ -26,9 +26,9 @@ BLOCKSIZE = High                ; Blocksize or "Low"/"High". High may cause late
 #                                 Valid numbers for blocksize are shown in the console messages when started manually
 USE_48kHz = False               ; Sets audio to 48000Hz while keeping wav's on 44100Hz. Try to avoid this...
 USE_SERIALPORT_MIDI = False     ; Set to True to enable MIDI IN via SerialPort (e.g. RaspberryPi's GPIO UART pins)
-USE_HD44780_16x2_LCD = False    ; Set to True to use a 16x2 direct connected/wired HD44780 LCD
+USE_HD44780_16x2_LCD = True    ; Set to True to use a 16x2 direct connected/wired HD44780 LCD
 #                                 If you use an I2C-HD44780, above option should be false !!!
-USE_I2C_LCD = True             ; Set True or 16x2 (=True) or 20x4 to use a 16x2 or 20x4 I2C connected HD44780 LCD
+USE_I2C_LCD = False             ; Set True or 16x2 (=True) or 20x4 to use a 16x2 or 20x4 I2C connected HD44780 LCD
 USE_OLED = False                ; Set True to use an OLED display via SPI. Configure below
 USE_PIMORONI_LCD = False        ; Set True to use LCD of Pimoroni PirateAudio hat. Configure below
 USE_I2C_7SEGMENTDISPLAY = False ; Set True to use a 7-segment display via I2C
@@ -93,8 +93,8 @@ PITCHBITS = 7                   ; pitchwheel resolution, 0=disable, max=14 (=163
 #     -- USE_BUTTONS --		; A valid GPIO value will activate the button
 BUT_incr=05                     ; Increase button, increases value/proceeds to next menu choice
 BUT_decr=13                     ; Decrease button, opposite of above. In 3-button setup it will return from submenu
-BUT_sel=26                      ; Select button, either selects menu choice or returns to menu from value set
-BUT_ret=xx                      ; if this button is available, it returns to menu and the decr-button is consistent
+BUT_sel=24                      ; Select button, either selects menu choice or returns to menu from value set
+BUT_ret=22                      ; if this button is available, it returns to menu and the decr-button is consistent
 #
 #     -- USE_LEDS --
 LED_red=27                      ; Red light
@@ -105,7 +105,7 @@ LCD_RS=7                        ; LCD Register select
 LCD_E=8                         ; Enable
 LCD_D4=27                       ; Data4 <== this overlap doesn't matter as only one hw display can be defined
 LCD_D5=17                       ; Data5
-LCD_D6=18                       ; Data6 <== reprogram/rewire if using HiFiberry compatible
+LCD_D6=23                       ; Data6 <== reprogram/rewire if using HiFiberry compatible
 LCD_D7=4                        ; Data7
 #
 #     -- USE_I2C_LCD -- HD44780 (I2C connection), either 16x2 or 20x4

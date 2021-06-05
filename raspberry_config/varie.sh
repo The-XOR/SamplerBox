@@ -9,4 +9,4 @@ sudo apt-get -y remove --purge rsyslog
 sudo cp systemd-random-seed.service /lib/systemd/system/systemd-random-seed.service
 cp remount.sh /home/pi
 cp sb.sh /home/pi
-sudo mkdit /samples
+sudo mkdir /samples
